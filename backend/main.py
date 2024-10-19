@@ -70,7 +70,7 @@ def read_registration(id: int):
     }
 
 # route for fetch all registrations
-@app.get("/register")
+@app.get("/registers")
 def fetch_registrations():
     cursor.execute("SELECT * FROM Registration")
     registrations = cursor.fetchall()
