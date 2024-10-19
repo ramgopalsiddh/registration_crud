@@ -1,4 +1,4 @@
-# Registration CRUD API (FastAPI + SQLite3)
+# Registration CRUD Web App
 
 ## Getting Started
 
@@ -65,3 +65,25 @@ python3 -m http.server 5500
 #### Access frontend from 
 
 - http://127.0.0.1:5500/index.html
+
+
+### Screenshots 
+
+ - ### Home page
+<img src="screenshots/home.png">
+
+ - ### edit user
+<img src="screenshots/edit_user_form.png">
+
+ - ### Delete user
+<img src="screenshots/delete_user.png">
+
+
+
+#### For more info OR suggestion contact me on
+
+- ### My Twitter :- <a href="https://twitter.com/ramgopalsiddh1/"> Twitter/ramgopal </a>
+
+- ### Linkedin :- <a href="https://www.linkedin.com/in/ramgopalsiddh/"> Linkedin/ramgopalsiddh </a>
+
+- ### Portfolio :- <a href="https://ramgopal.dev/">ramgopal.dev</a>
