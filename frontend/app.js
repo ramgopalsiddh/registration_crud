@@ -1,4 +1,4 @@
-const apiUrl = 'http://127.0.0.1:8000/register'; // Update with the correct backend API URL
+const apiUrl = 'http://127.0.0.1:8000/registers'; // Update with the correct backend API URL
 const formSubmitButton = document.querySelector('form button[type="submit"]');
 let isEditMode = false;
 
@@ -28,6 +28,7 @@ document.getElementById('registrationForm').addEventListener('submit', async fun
         }
 
         alert('Registration created successfully!');
+        fetchRegistrations();
         document.getElementById('registrationForm').reset(); // Reset the form
 
     } catch (error) {
@@ -85,7 +86,7 @@ async function editRegistration(id) {
 async function deleteRegistration(id) {
     if (confirm('Are you sure you want to delete this registration?')) {
         try {
-            const response = await fetch(`${apiUrl}/${id}`, { method: 'DELETE' });
+            const response = await fetch(`http://127.0.0.1:8000/register/${id}`, { method: 'DELETE' });
             if (!response.ok) throw new Error('Failed to delete registration');
 
             fetchRegistrations();
