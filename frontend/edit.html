@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Edit Registration</h1>
+
+    <div class="form-container">
+        <form id="editRegistrationForm">
+            <input type="hidden" id="id" placeholder="Registration ID">
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter Email" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="Enter Phone Number">
+
+            <label for="address">Address:</label>
+            <textarea id="address" placeholder="Enter Address"></textarea>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="edit.js"></script>
+</body>
+</html>
