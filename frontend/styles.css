@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 600px; /* Increase width for the form */
+}
+
+.form-row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out the fields */
+}
+
+.form-group {
+    flex: 1; /* Allow fields to take equal space */
+    margin-right: 10px; /* Add margin between fields */
+}
+
+.form-group:last-child {
+    margin-right: 0; /* Remove margin from the last element */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 50%; /* Make the submit button full width */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #06e93b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#output {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 80%; /* Keep max-width for output */
+}
+
+#output table {
+    width: 100%; /* Make the table full width */
+    border-collapse: collapse;
+}
+
+#output th, #output td {
+    border: 1px solid #020202;
+    padding: 2px;
+    text-align: left;
+}
+
+#output tr:nth-child(even) {
+    background-color: #f9f9f9; /* Zebra striping */
+}
+
+#output tr:hover {
+    background-color: #cccaca; /* Row hover effect */
+}
+
+
+.edit-btn:hover {
+    background-color: #525a61; /* Darker blue on hover */
+}
+
+.delete-btn:hover {
+    background-color: #74696a; /* Darker red on hover */
+}
+
+.button-group {
+    display: flex; /* Align buttons in a row */
+    gap: 5px; /* Space between buttons */
+}
+
+.edit-btn {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.delete-btn {
+    background-color: #dc3545; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 8px;
+}
