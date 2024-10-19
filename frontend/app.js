@@ -2,36 +2,40 @@ const apiUrl = 'http://127.0.0.1:8000/register'; // Update with the correct back
 const formSubmitButton = document.querySelector('form button[type="submit"]');
 let isEditMode = false;
 
+
 document.getElementById('registrationForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
-    
-    const id = document.getElementById('id').value;
+    e.preventDefault(); // Prevent page refresh
+
+    // Get form data
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const dob = document.getElementById('dob').value;
     const phone = document.getElementById('phone').value;
     const address = document.getElementById('address').value;
 
-    const method = id ? 'PUT' : 'POST';
-    const apiUrlWithId = id ? `${apiUrl}/${id}` : apiUrl;
-    
     try {
-        const response = await fetch(apiUrlWithId, {
-            method: method,
+        const response = await fetch('http://127.0.0.1:8000/register', {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ name, email, dob, phone, address }),
         });
 
-        if (!response.ok) throw new Error('Failed to submit data');
+        if (!response.ok) {
+            const errorDetail = await response.json(); // Get error details if available
+            throw new Error(errorDetail.detail || 'Failed to create user');
+        }
 
-        fetchRegistrations();
-        resetForm();
+        alert('Registration created successfully!');
+        document.getElementById('registrationForm').reset(); // Reset the form
+
     } catch (error) {
-        alert('Error submitting data: ' + error.message);
+        alert('Error creating registration: ' + error.message);
     }
 });
+
+
 
 async function fetchRegistrations() {
     try {
@@ -90,7 +94,6 @@ async function deleteRegistration(id) {
         }
     }
 }
-
 
 
 // Initial fetch on page load
