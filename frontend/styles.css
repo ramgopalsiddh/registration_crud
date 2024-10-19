@@ -17,21 +17,21 @@ h1 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 600px; /* Increase width for the form */
+    width: 50%;
 }
 
 .form-row {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space out the fields */
+    display: flex; 
+    justify-content: space-between;
 }
 
 .form-group {
-    flex: 1; /* Allow fields to take equal space */
-    margin-right: 10px; /* Add margin between fields */
+    flex: 1;
+    margin-right: 10px;
 }
 
 .form-group:last-child {
-    margin-right: 0; /* Remove margin from the last element */
+    margin-right: 0;
 }
 
 label {
@@ -48,14 +48,27 @@ input, textarea {
 }
 
 button {
-    width: 50%; /* Make the submit button full width */
+    width: 50%;
     padding: 10px;
     margin-top: 10px;
-    background-color: #06e93b;
+    background-color: #0cda3c;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 800;
+}
+
+.submit-button {
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #0cda3c;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 800;
 }
 
 button:hover {
@@ -65,44 +78,51 @@ button:hover {
 #output {
     margin-top: 20px;
     width: 100%;
-    max-width: 80%; /* Keep max-width for output */
+    max-width: 80%;
 }
 
 #output table {
-    width: 100%; /* Make the table full width */
+    width: 100%;
     border-collapse: collapse;
+    margin-bottom: 50px;
 }
 
-#output th, #output td {
+#output td {
     border: 1px solid #020202;
-    padding: 2px;
+    padding: 1px;
+    text-align: left;
+}
+
+#output th {
+    border: 2px solid #020202;
+    padding: 8px;
     text-align: left;
 }
 
 #output tr:nth-child(even) {
-    background-color: #f9f9f9; /* Zebra striping */
+    background-color: #f9f9f9;
 }
 
 #output tr:hover {
-    background-color: #cccaca; /* Row hover effect */
+    background-color: #cccaca;
 }
 
 
 .edit-btn:hover {
-    background-color: #525a61; /* Darker blue on hover */
+    background-color: #525a61;
 }
 
 .delete-btn:hover {
-    background-color: #74696a; /* Darker red on hover */
+    background-color: #74696a;
 }
 
 .button-group {
-    display: flex; /* Align buttons in a row */
-    gap: 5px; /* Space between buttons */
+    display: flex;
+    gap: 5px;
 }
 
 .edit-btn {
-    background-color: #007bff; /* Blue color */
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -111,7 +131,7 @@ button:hover {
 }
 
 .delete-btn {
-    background-color: #dc3545; /* Red color */
+    background-color: #dc3545;
     color: white;
     border: none;
     border-radius: 10px;
